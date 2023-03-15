@@ -1,7 +1,21 @@
 <meta charset="UTF-8">
 
 <script>
-    document.write("Flávio nasceu em " + (2016 - 39) + "<br>");
-    document.write("Joaquim nasceu em " + (2016 - 20) + "<br>");
-    document.write("Barney nasceu em " + (2016 - 40) + "<br>");
+    let ano = 2016;
+    document.write("Flávio tem " + (ano - 1977) + " anos<br>");
+    document.write("Joaquim tem " + (ano - 1996) + " anos<br>");
+    
+    ano = 2017;
+    document.write("Barney tem " + (ano - 1976) + " anos<br>");
+
+    const idadeFlavio = 39;
+    const idadeJoaquim = 20;
+    const idadeBarney = 41;
+    const media = (idadeFlavio + idadeJoaquim + idadeBarney)/3;
+    
+    document.write("A média das idades é " + Math.round(media));
+
+    const nome = "Flávio";
+
+    document.write("<br>A idade de " + nome + " é " + idadeFlavio);
 </script>
