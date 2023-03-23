@@ -16,11 +16,22 @@
         return Math.round(Math.random() * n);
     }
     
-    const numeroPensado = sorteia(100);
-    const chute = parseInt(prompt("Já pensei. Qual você acha que é?"));
+    const numeroPensado = sorteia(10);
 
-    if(chute == numeroPensado) mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado); 
-    if(chute > numeroPensado) mostra("Você errou! Seu chute é maior que o número pensado!");
-    if(chute < numeroPensado) mostra("Você errou! Seu chute é menor que o número pensado!");
+    let tentativas = 1;
+    while(tentativas <= 3){
 
+        const chute = parseInt(prompt("Digite seu chute!"));
+    
+        if(chute == numeroPensado){
+            mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado); 
+            tentativas = 4; 
+        } else {
+            mostra("Você errou!");
+        } 
+
+        tentativas++;
+    }
+
+    mostra("FIM");
 </script>
